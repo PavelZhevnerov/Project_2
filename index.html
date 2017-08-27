@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Profile</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet">
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="content">
+
+			<header class="header">
+				<p>Personal profile</p>
+			</header>
+
+			<!-- ОСНОВНОЕ СОДЕРЖИМОЕ -->
+			<div class="tabs">
+
+				<!-- ВЕРХНИЕ ТАБЫ -->
+				<ul class="tabs__controls">
+					<a href="http://google.com" class="tabs__controls-item active" data-controls="1">Step 1</a>
+					<a href="#" class="tabs__controls-item disabled" data-controls="2">Step 2</a>
+					<a href="#" class="tabs__controls-item disabled" data-controls="3">Step 3</a>
+					<a href="#" class="tabs__controls-item disabled" data-controls="4" id="resultTab">Summary</a>
+				</ul>
+
+				<!-- КОНТЕЙНЕР С ВКЛАДКАМИ -->
+				<ul class="tabs__list">
+
+					<!-- 1-Я ВКЛАДКА -->
+					<li class="tabs__item active" data-item="1">
+						<form class="tabs__form form_1" action="#" method="post" name="userInfo_part-1" novalidate>
+							<h3 class="form__title">Общая информация</h3>
+							<div class="field">
+								<span class="field__name">
+									<label for="userName">Ваше имя</label>
+								</span>
+								<p class="field__value">
+									<input type="text" id="userName" name="userName" placeholder="Имя">
+								</p>
+							</div>
+							<div class="field">
+								<span class="field__name">
+									<label for="userSurname">Ваша фамилия</label>
+								</span>
+								<p class="field__value">
+									<input type="text" id="userSurname" name="userSurname" placeholder="Фамилия">
+								</p>
+							</div>
+							<div class="field">
+								<span class="field__name">
+									<label for="userPatronymic">Ваше отчество</label>
+								</span>
+								<p class="field__value">
+									<input type="text" id="userPatronymic" name="userPatronymic" placeholder="Отчество">
+								</p>
+							</div>
+							<div class="field">
+								<span class="field__name">
+									<label for="userAge">Ваш возраст</label>
+								</span>
+								<p class="field__value">
+									<input type="number" id="userAge" name="userAge" placeholder="18">
+								</p>
+							</div>
+							<div class="field">
+								<span class="field__name">Пол</span>
+								<p class="field__value">
+									<label><input type="radio" name="userSex" value="1" id="userSex"> Мужской</label>
+									<label><input type="radio" name="userSex" value="2"> Женский</label>
+								</p>
+							</div>
+							<div class="field">
+								<span class="field__name">
+									<label for="userСitizenship">Гражданство</label>
+								</span>
+								<p class="field__value">
+									<input type="text" id="userСitizenship" name="userСitizenship" placeholder="Республика Беларусь">
+								</p>
+							</div>
+							<div class="field">
+								<span class="field__name">Семейное положение</span>
+								<p class="field__value">
+									<select id="maritalStatus" name="maritalStatus">
+										<option value=""></option>
+										<option value="1">Замужем/женат</option>
+										<option value="2">Холост/не замужем</option>
+										<option value="3">Разведен(а)</option>
+										<option value="4">Состоим в официальном браке, но живем отдельно</option>
+										<option value="5">Не состоим в официальном браке, но живем вместе</option>
+										<option value="6">Вдова/вдовец</option>
+									</select>
+								</p>
+							</div>
+
+							<div class="form__buttons">
+								<input class="form__btn form__btn_check" type="submit" value="Проверить данные">
+								<input class="form__btn form__btn_reset" type="reset" value="Очистить данные">
+							</div>
+
+						</form>
+						<div class="tabs__info">
+							<h3>Статус</h3>
+							<p></p>
+						</div>
+						<div class="tabs__buttons">
+							<a href="#" class="tabs__btn tabs__btn_next disabled">Next</a>
+						</div>
+					</li>
+
+					<!-- 2-Я ВКЛАДКА -->
+					<li class="tabs__item" data-item="2">
+						<form class="tabs__form form_2" action="#" method="post" name="userInfo_part-2" novalidate>
+							<h3 class="form__title">Образование, работа</h3>
+							<div class="field">
+								<span class="field__name">Уровень Вашего образования</span>
+								<p class="field__value">
+									<select name="educationLevel" id="educationLevel">
+										<option value=""></option>
+										<option value="1">Неполное среднее</option>
+										<option value="2">Среднее</option>
+										<option value="3">Среднее профессиональное</option>
+										<option value="4">Незаконченное высшее</option>
+										<option value="5">Высшее</option>
+										<option value="6">Есть ученое звание, степень</option>
+									</select>
+								</p>
+							</div>
+							<div class="field">
+								<span class="field__name">
+									<label for="yearGraduation">Год окончания учреждения образования</label>
+								</span>
+								<p class="field__value">
+									<input type="number" id="yearGraduation" name="yearGraduation">
+								</p>
+							</div>
+							<div class="field">
+								<span class="field__name">
+									<label for="institutionEducation">Название учреждения образования</label>
+								</span>
+								<p class="field__value">
+									<input type="text" id="institutionEducation" name="institutionEducation" placeholder="БНТУ">
+								</p>
+							</div>
+							<div class="field">
+								<span class="field__name">
+									<label for="languages">Знание языков</label>
+								</span>
+								<p class="field__value">
+									<input type="text" id="languages" name="languages" placeholder="русский, английский, ...">
+								</p>
+							</div>
+							<div class="field">
+								<span class="field__name">Ваш род занятий</span>
+								<p class="field__value">
+									<select name="userOccupation" id="userOccupation">
+										<option value=""></option>
+										<option value="1">Руководитель, управленец</option>
+										<option value="2">Индивидуальный предприниматель</option>
+										<option value="3">Служащий</option>
+										<option value="4">Рабочий</option>
+										<option value="5">Студент</option>
+										<option value="6">Домохозяйка</option>
+										<option value="7">Пенсионер</option>
+										<option value="8">Безработный</option>
+									</select>
+								</p>
+							</div>
+							<div class="field">
+								<span class="field__name">
+									Уровень Вашего дохода
+								</span>
+								<p class="field__value">
+									<select name="userIncome" id="userIncome">
+										<option value=""></option>
+										<option value="1">Денег хватает только на приобретение продуктов питания</option>
+										<option value="2">Денег достаточно для приобретения необходимых продуктов питания и одежды, но на более крупные покупки приходится откладывать</option>
+										<option value="3">Покупка большинства товаров длительного пользования (холодильник, телевизор) не вызывает трудностей, однако купить квартиру мы не можем</option>
+										<option value="4">Денег достаточно, чтобы вообще ни в чем себе не отказывать</option>
+									</select>
+								</p>
+							</div>
+							<div class="field">
+								<span class="field__name">
+									Ключевые навыки
+								</span>
+								<p class="field__value">
+									<textarea name="userSkills" id="userSkills" rows="5"></textarea>
+								</p>
+							</div>
+
+							<div class="form__buttons">
+								<input class="form__btn form__btn_check" type="submit" value="Проверить данные">
+								<input class="form__btn form__btn_reset" type="reset" value="Очистить данные">
+							</div>
+
+						</form>
+						<div class="tabs__info">
+							<h3>Статус</h3>
+							<p></p>
+						</div>
+						<div class="tabs__buttons">
+							<a href="#" class="tabs__btn tabs__btn_prev">Previous</a>
+							<a href="#" class="tabs__btn tabs__btn_next disabled">Next</a>
+						</div>
+					</li>
+
+					<!-- 3-Я ВКЛАДКА -->
+					<li class="tabs__item" data-item="3">
+						<form class="tabs__form form_3" action="#" method="post" name="userInfo_part-3" novalidate>
+							<h3 class="form__title">Контактные данные</h3>
+							<div class="field">
+								<span class="field__name">
+									<label for="userPhone">Контактный телефон</label>
+								</span>
+								<p class="field__value">
+									<input type="text" id="userPhone" name="userPhone" placeholder="+375(__)___-__-__">
+								</p>
+							</div>
+							<div class="field">
+								<span class="field__name">
+									<label for="userEmail">Электронная почта</label>
+								</span>
+								<p class="field__value">
+									<input type="text" id="userEmail" name="userEmail" placeholder="mail@mail.ru">
+								</p>
+							</div>
+							<div class="field">
+								<span class="field__name">
+									<label for="userSkype">Skype</label>
+								</span>
+								<p class="field__value">
+									<input type="text" id="userSkype" name="userSkype">
+								</p>
+							</div>
+							<div class="field">
+								<span class="field__name">
+									<label for="userSocialNetwork">Социальные сети</label>
+								</span>
+								<p class="field__value">
+									<input type="text" id="userSocialNetwork" name="userSocialNetwork">
+								</p>
+							</div>
+							<div class="field">
+								<span class="field__name">
+									<label for="userAgree">Согласен на отправку персональных данных</label>
+								</span>
+								<p class="field__value">
+									<input type="checkbox" id="userAgree" name="userAgree">
+								</p>
+							</div>
+
+							<div class="form__buttons">
+								<input class="form__btn form__btn_check" type="submit" value="Проверить данные">
+								<input class="form__btn form__btn_reset" type="reset" value="Очистить данные">
+							</div>
+
+						</form>
+						<div class="tabs__info">
+							<h3>Статус</h3>
+							<p></p>
+						</div>
+						<div class="tabs__buttons">
+							<a href="#" class="tabs__btn tabs__btn_prev">Previous</a>
+							<a href="#" class="tabs__btn tabs__btn_next disabled" id="result">Next</a>
+						</div>
+					</li>
+
+					<!-- ВКЛАДКА СОБРАННОЙ ИНФОРМАЦИИ-->
+					<li class="tabs__item" data-item="4">
+						<form class="tabs__form form_4" action="#" method="post" name="userInfo" novalidate>
+							<h3 class="form__title">Info</h3>
+							<div class="field">
+								<span class="field__name">
+									<label for="userFIO">Введите ФИО пользователя</label>
+								</span>
+								<p class="field__value">
+									<input type="text" id="userFIO" name="userFIO">
+								</p>
+							</div>
+							<div class="field">
+								<input class="form__btn" type="submit" id="getInfo" value="Получить данные">
+							</div>
+							<div class="info-user"></div>
+						</form>
+						<div class="tabs__buttons">
+							<a href="#" class="tabs__btn tabs__btn_prev">Previous</a>
+						</div>
+					</li>
+
+				</ul>
+			</div>
+		</div>
+		<footer class="footer">
+			<p>Project by P.A.</p>
+		</footer>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="script/constructor.js" defer></script>
+	<script src="script/script.js" defer></script>
+</body>
+</html>
