@@ -198,7 +198,7 @@ function validateField(field) {
 			parentTag.classList.add('error-field');
 			field.focus();//сфокусировать на невалидном поле
 			arrStatus.push(false);
-		} else if (field.getAttribute('type') === 'number' && !field.value || field.value <= 0) {
+		} else if (field.getAttribute('type') === 'number' && (!field.value || field.value <= 0 || field.value > setYear())) {
 			parentTag.classList.add('error-field');
 			field.focus();
 			arrStatus.push(false);
